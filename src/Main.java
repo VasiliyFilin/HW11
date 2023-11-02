@@ -24,20 +24,16 @@ public class Main {
         }
     }
 
-    public static void calculateDelivery(int d) {
+    public static int calculateDelivery(int d) {
         int deliveryDays = 0;
         if (d < 20) {
             deliveryDays = 1;
-        } else if (d >=20 && d < 60) {
+        } else if (d >= 20 && d < 60) {
             deliveryDays = 2;
-        } else if (d >=60 && d < 100) {
+        } else if (d >= 60 && d < 100) {
             deliveryDays = 3;
         }
-        if (deliveryDays == 0) {
-            System.out.println("Доставки нет");
-        } else {
-            System.out.println("Потребуется дней: " + deliveryDays);
-        }
+        return deliveryDays;
     }
     public static void main(String[] args) {
 
@@ -54,7 +50,7 @@ public class Main {
 
 //        Задача 3
         System.out.println("\nЗадача 3:\n");
-        int deliveryDistance = 100;
+        int deliveryDistance = 20;
         calculateDelivery(deliveryDistance);
     }
 }
